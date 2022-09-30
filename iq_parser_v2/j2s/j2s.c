@@ -604,7 +604,7 @@ static int j2s_json_to_array_with_index(j2s_ctx* ctx, cJSON* json,
 {
     j2s_obj tmp_obj;
     cJSON *index_item, *item;
-    int size, index, ret;
+    int size, index, ret = -1;
 
     size = cJSON_GetArraySize(index_json);
     if (!size)
@@ -617,8 +617,6 @@ static int j2s_json_to_array_with_index(j2s_ctx* ctx, cJSON* json,
 
     if (query) {
         cJSON* root;
-
-        ret = 0;
 
         /* Clear the original array */
         root = cJSON_CreateArray();
