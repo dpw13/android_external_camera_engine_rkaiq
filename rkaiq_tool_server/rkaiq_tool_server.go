@@ -28,7 +28,7 @@ func RkaiqToolServerDefaults(ctx android.LoadHookContext) {
 
     p := &props{}
     p.Target.Android.Enabled = new(bool)
-    board := ctx.Config().Getenv("TARGET_BOARD_PLATFORM")
+    board := ctx.Config().VendorConfig("ANDROID").String("target_board_platform")
     if board == "rk3562" {
         fmt.Fprintf(os.Stderr, "%s WILL COMPILE rkaiq_tool_server binary\n", board)
         *p.Target.Android.Enabled = true

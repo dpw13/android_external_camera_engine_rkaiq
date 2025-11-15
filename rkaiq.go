@@ -7,12 +7,12 @@ import (
     "os"
 )
 
-func rkaiqFlags(ctx android.BaseContext) []string {
+func rkaiqFlags(ctx android.LoadHookContext) []string {
     var cflags []string
     //fmt.Fprintf(os.Stderr, "%s\n", "deviceFlags called") //example prints
-    //fmt.Fprintf(os.Stderr, "%s\n", ctx.AConfig())
-    board := ctx.Config().Getenv("TARGET_BOARD_PLATFORM") //currently using this for reference but you can refer to README for other variables.
-    fmt.Fprintf(os.Stderr, ">>>>>>>>>>>>>>>>>>>>> %s\n", board)
+    //fmt.Fprintf(os.Stderr, "%s\n", ctx.Config().VendorConfig("ANDROID").String("target_board_platform"))
+    board := ctx.Config().VendorConfig("ANDROID").String("target_board_platform") //currently using this for reference but you can refer to README for other variables.
+    fmt.Fprintf(os.Stderr, ">>>>>>>>>>>>>>>>>>>>> rkaiq board: %s\n", board)
     if board == "rv1126" {
        cflags = append(cflags, "-DISP_HW_V20")
     }
@@ -31,8 +31,8 @@ func rkaiqFlags(ctx android.BaseContext) []string {
     return cflags
 }
 
-func rkaiq_get_aiq_version(ctx android.BaseContext) string {
-    board := ctx.Config().Getenv("TARGET_BOARD_PLATFORM")
+func rkaiq_get_aiq_version(ctx android.LoadHookContext) string {
+    board := ctx.AConfig().VendorConfig("ANDROID").String("target_board_platform")
     // fmt.Fprintf(os.Stderr, ">>>>>>>>>>>>>>>>>>>>> %s\n", board)
     return board;
 }
