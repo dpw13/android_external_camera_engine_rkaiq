@@ -21,7 +21,7 @@
 /* for rockchip v2.0.0*/
 
 #include "a3dlut/rk_aiq_a3dlut_algo.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "interpolation.h"
 
 RKAIQ_BEGIN_DECLARE

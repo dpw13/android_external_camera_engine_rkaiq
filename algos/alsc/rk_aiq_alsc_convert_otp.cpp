@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <xcam_std.h>
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_alsc_convert_otp.h"
 
 // #define WRITE_OTP_TABLE 1

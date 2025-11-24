@@ -21,8 +21,8 @@
 
 #include "RkAiqCalibDbTypes.h"
 #include "asharpV33/rk_aiq_types_asharp_algo_int_v33.h"
-#include "xcam_common.h"
-#include "xcam_log.h"
+#include "base/xcam_common.h"
+#include "base/xcam_log.h"
 
 // RKAIQ_BEGIN_DECLARE
 

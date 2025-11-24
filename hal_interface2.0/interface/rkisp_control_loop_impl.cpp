@@ -41,7 +41,7 @@
 
 //test
 #include "rk_aiq_user_api_imgproc.h"
-#include "rk_aiq_user_api2_imgproc.h"
+#include "uAPI2/rk_aiq_user_api2_imgproc.h"
 
 #include "rkaiq.h"
 #include "rk_aiq_api_private.h"
@@ -329,7 +329,7 @@ EXIT:
 
 int rkisp_cl_init(void** cl_ctx, const char* tuning_file_path,
                   const cl_result_callback_ops_t *callback_ops) {
-    char* sns_entity_name = "m01_f_os04a10 1-0036-1";
+    const char* sns_entity_name = "m01_f_os04a10 1-0036-1";
     xcam_get_log_level();
     LOGD("--------------------------rk_aiq_uapi_sysctl_init");
     rk_aiq_sys_ctx_t* aiq_ctx = NULL;

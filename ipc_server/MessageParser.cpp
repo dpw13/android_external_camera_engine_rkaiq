@@ -415,8 +415,10 @@ unsigned int MessageParser::MurMurHash(const void *key, int len) {
   switch (len) {
   case 3:
     h ^= data[2] << 16;
+    [[clang::fallthrough]];
   case 2:
     h ^= data[1] << 8;
+    [[clang::fallthrough]];
   case 1:
     h ^= data[0];
     h *= m;

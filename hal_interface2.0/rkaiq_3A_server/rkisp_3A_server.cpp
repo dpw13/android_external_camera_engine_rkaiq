@@ -480,7 +480,7 @@ void parse_args(int argc, char **argv)
            case '?':
                ERR("Usage: %s to start 3A engine\n"
                    "         --sensor_index,  optional, sendor index\n"
-                   "         --silent,        optional, subpress debug log\n",
+                   "         --silent,        optional, subpress debug log\n"
                    "         --hdrmode,       required, NORMAL/HDR2/HDR3 \n",
                    argv[0]);
                exit(-1);

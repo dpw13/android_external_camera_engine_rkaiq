@@ -28,7 +28,7 @@
 #include "dma_buffer.h"
 #include "drm_device.h"
 #include "xcam_defs.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 namespace XCam {
 

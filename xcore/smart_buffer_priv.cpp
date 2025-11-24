@@ -19,7 +19,7 @@
  */
 
 #include "smart_buffer_priv.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_types_priv.h"
 
 #if HAS_LIBDRM

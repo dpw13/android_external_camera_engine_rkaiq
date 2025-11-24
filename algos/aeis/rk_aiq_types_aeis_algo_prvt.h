@@ -22,8 +22,8 @@
 #define _RK_AIQ_TYPES_AEIS_ALGO_PRVT_H_
 
 #include "rk_aiq_types.h"
-#include "xcam_common.h"
-#include "xcam_log.h"
+#include "base/xcam_common.h"
+#include "base/xcam_log.h"
 
 RKAIQ_BEGIN_DECLARE
 

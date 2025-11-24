@@ -4,7 +4,7 @@
 #include "base/xcam_common.h"
 #include "rk_aiq_algo_des.h"
 #include "rk_aiq_types_adebayer_algo_int.h"
-//#include "xcam_log.h"
+//#include "base/xcam_log.h"
 
 typedef struct rk_aiq_uapi_sync_s rk_aiq_uapi_sync_t;
 

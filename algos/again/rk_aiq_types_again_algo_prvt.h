@@ -22,8 +22,8 @@
 
 #include "again/rk_aiq_types_again_algo_int.h"
 #include "RkAiqCalibDbTypes.h"
-#include "xcam_log.h"
-#include "xcam_common.h"
+#include "base/xcam_log.h"
+#include "base/xcam_common.h"
 #include "RkAiqCalibDbTypesV2.h"
 #include "RkAiqCalibDbV2Helper.h"
 

@@ -45,7 +45,7 @@
 #include "RkAiqCalibDbTypes.h"
 #include "RkAiqCalibDbTypesV2.h"
 #include "RkAiqCalibDbV2Helper.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #define INTERP_DEBAYER_V2(x0, x1, ratio)    ((ratio) * ((x1) - (x0)) + x0)
 #define LOG2(x)                             (log((double)x) / log((double)2))

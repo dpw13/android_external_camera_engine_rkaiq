@@ -63,9 +63,9 @@ ifneq ($(filter rv1106, $(strip $(TARGET_BOARD_PLATFORM))), )
 LOCAL_SRC_FILES += demo/awb_algo_demo/third_party_awbV32_algo.cpp
 endif
 
-LOCAL_CPPFLAGS += -std=c++11 -Wno-error -DAndroid
+LOCAL_CPPFLAGS += -std=c++11 -DAndroid
 #LOCAL_CPPFLAGS += -std=c++11 -Wno-error
-LOCAL_CFLAGS += -Wno-error -Wno-return-type
+#LOCAL_CFLAGS += -Wno-error -Wno-return-type
 #LOCAL_CPPFLAGS += -DLINUX
 #LOCAL_CPPFLAGS += $(PRJ_CPPFLAGS)
 LOCAL_CFLAGS += -DANDROID_OS

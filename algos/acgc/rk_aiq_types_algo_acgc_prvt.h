@@ -24,7 +24,7 @@
 #include "RkAiqCalibDbV2Helper.h"
 #include "base/xcam_common.h"
 #include "rk_aiq_types_acgc_algo.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 typedef struct AcgcContext_s {
     CamCalibDbV2Context_t* calibv2;

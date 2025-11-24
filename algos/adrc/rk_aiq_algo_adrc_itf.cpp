@@ -18,7 +18,7 @@
  */
 
 #include "adrc/rk_aiq_algo_adrc_itf.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #if RKAIQ_HAVE_DRC_V10
 #include "adrc/rk_aiq_adrc_algo_v10.h"
 #endif

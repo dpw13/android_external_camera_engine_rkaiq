@@ -30,7 +30,7 @@
 // By default MessageQueue::receive() waits infinitely for a new message
 #define MESSAGE_QUEUE_RECEIVE_TIMEOUT_MSEC_INFINITE 0
 
-NAMESPACE_DECLARATION {
+namespace android { namespace camera2 {
 
 template <class MessageType, class MessageId>
 class MessageQueue {
@@ -224,7 +224,7 @@ private:
 
 }; // class MessageQueue
 
-} NAMESPACE_DECLARATION_END
+} }
 
 //#include "MessageQueue.cpp"
 

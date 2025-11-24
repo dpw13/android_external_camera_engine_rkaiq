@@ -20,8 +20,8 @@
 #ifndef _RK_AIQ_TYPES_ACCM_ALGO_PRVT_H_
 #define _RK_AIQ_TYPES_ACCM_ALGO_PRVT_H_
 #include "accm/rk_aiq_types_accm_algo_int.h"
-#include "xcam_log.h"
-#include "xcam_common.h"
+#include "base/xcam_log.h"
+#include "base/xcam_common.h"
 #include "common/list.h"
 
 

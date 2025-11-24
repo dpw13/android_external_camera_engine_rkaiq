@@ -69,10 +69,10 @@ void SettingsProcessor::parseMeteringRegion(const CameraMetadata *settings,
         width = entry.data.i32[2];
         height = entry.data.i32[3];
         // TODO support more than one metering region
+        croppingRegion.init(topLeft, width, height, 0);
     } else {
         LOGW("invalid control entry count for crop region: %d", entry.count);
     }
-    croppingRegion.init(topLeft, width, height, 0);
 
     if (tagId == ANDROID_CONTROL_AE_REGIONS ||
         tagId == ANDROID_CONTROL_AWB_REGIONS ||
@@ -85,13 +85,13 @@ void SettingsProcessor::parseMeteringRegion(const CameraMetadata *settings,
             bottomRight.y = entry.data.i32[3];
             weight = entry.data.i32[4];
             // TODO support more than one metering region
+            meteringWindow->init(topLeft, bottomRight, weight);
         } else
             LOGW("invalid control entry count %d", entry.count);
     } else {
         LOGW("Unsupported tag ID (%d) is given", tagId);
     }
 
-    meteringWindow->init(topLeft, bottomRight, weight);
     if (meteringWindow->isValid() && croppingRegion.isValid()) {
         // Clip the region to the crop rectangle
         meteringWindow->clip(croppingRegion);
@@ -268,42 +268,45 @@ SettingsProcessor::fillAeInputParams(const CameraMetadata *settings,
             if (timens > 0) {
                 /* TODO  need add exposure time limited mechanism*/
                 if (timens > aeParams->exposure_time_max) {
-                    LOGE("exposure time %" PRId64 " ms is bigger than the max exposure time %" PRId64 " ms",
+                    LOGW("exposure time %" PRId64 " ms is bigger than the max exposure time %" PRId64 " ms",
                         timens, aeParams->exposure_time_max);
-                    //return XCAM_RETURN_ERROR_UNKNOWN;
+                    timens = aeParams->exposure_time_max;
                 } else if (timens < aeParams->exposure_time_min) {
-                    LOGE("exposure time %" PRId64 " ms is smaller than the min exposure time %" PRId64 " ms",
+                    LOGW("exposure time %" PRId64 " ms is smaller than the min exposure time %" PRId64 " ms",
                         timens, aeParams->exposure_time_min);
-                    //return XCAM_RETURN_ERROR_UNKNOWN;
-                } else
-                    aeParams->manual_exposure_time = timens;
+                    timens = aeParams->exposure_time_min;
+                }
+                aeParams->manual_exposure_time = timens;
             } else {
                 // Don't constrain AIQ.
                 aeParams->manual_exposure_time = 0;
             }
         }
 
-        int32_t iso_min, iso_max;
         rw_entry = staticMeta.find(ANDROID_SENSOR_INFO_SENSITIVITY_RANGE);
         if (rw_entry.count == 2) {
+            int32_t iso_min, iso_max;
+
             iso_min = rw_entry.data.i32[0];
             iso_max = rw_entry.data.i32[1];
-        }
-        aeParams->max_analog_gain = (double)iso_max / 100;
-        // ******** manual_iso
-        //# METADATA_Control sensor.sensitivity done
-        entry = settings->find(ANDROID_SENSOR_SENSITIVITY);
-        if (entry.count == 1) {
-            int32_t iso = entry.data.i32[0];
-            aeParams->manual_analog_gain = iso;
-            /* TODO  need add iso limited mechanism*/
-            if (iso >= iso_min && iso <= iso_max) {
-                aeParams->manual_analog_gain = (double)iso;
-            } else {
-                LOGE("@%s %d: manual iso(%d) is out of range[%d,%d]", __FUNCTION__, __LINE__, iso, iso_min, iso_max);
-                aeParams->manual_analog_gain = (double)(iso_min+iso_max) / 2;
+
+            aeParams->max_analog_gain = (double)iso_max / 100;
+            // ******** manual_iso
+            //# METADATA_Control sensor.sensitivity done
+            entry = settings->find(ANDROID_SENSOR_SENSITIVITY);
+            if (entry.count == 1) {
+                int32_t iso = entry.data.i32[0];
+
+                /* TODO  need add iso limited mechanism*/
+                if (iso > iso_max) {
+                    LOGW("@%s %d: manual iso(%d) is greater than max(%d)", __FUNCTION__, __LINE__, iso, iso_max);
+                    iso = iso_max;
+                } else if (iso < iso_min) {
+                    LOGW("@%s %d: manual iso(%d) is less than min(%d)", __FUNCTION__, __LINE__, iso, iso_min);
+                    iso = iso_min;
+                }
+                aeParams->manual_analog_gain = (double)iso / 100;
             }
-            aeParams->manual_analog_gain /= 100;
         }
         // fill target fps range, it needs to be proper in results anyway
         entry = settings->find(ANDROID_CONTROL_AE_TARGET_FPS_RANGE);

@@ -5,7 +5,7 @@
 #include "RkAiqCalibDbTypes.h"
 #include "RkAiqCalibDbTypesV2.h"
 #include "rk_aiq_types_aie_algo_int.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 typedef struct _RkAiqAlgoContext {
     int skip_frame;

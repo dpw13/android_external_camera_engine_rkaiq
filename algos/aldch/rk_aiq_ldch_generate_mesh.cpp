@@ -17,7 +17,7 @@
  *
  */
 
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_ldch_generate_mesh.h"
 
 #define LDCH_CUSTOM_MESH "ldch_custom_mesh.bin"

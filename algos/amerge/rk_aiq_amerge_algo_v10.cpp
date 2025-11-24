@@ -18,7 +18,7 @@
 #include "math.h"
 #include "rk_aiq_types_amerge_algo_int.h"
 #include "rk_aiq_types_amerge_algo_prvt.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 /******************************************************************************
  * AmergeStart()

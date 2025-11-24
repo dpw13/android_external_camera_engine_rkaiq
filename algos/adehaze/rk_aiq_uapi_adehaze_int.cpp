@@ -1,6 +1,6 @@
 #include "rk_aiq_uapi_adehaze_int.h"
 #include "rk_aiq_types_adehaze_algo_prvt.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #if RKAIQ_HAVE_DEHAZE_V10
 XCamReturn rk_aiq_uapi_adehaze_v10_SetAttrib(RkAiqAlgoContext* ctx, adehaze_sw_v10_t* attr,

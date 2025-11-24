@@ -21,7 +21,7 @@
 #define _SMART_BUFFER_PRIV_H_
 
 #include <xcam_std.h>
-#include "xcam_buffer.h"
+#include "base/xcam_buffer.h"
 #include "video_buffer.h"
 
 namespace XCam {

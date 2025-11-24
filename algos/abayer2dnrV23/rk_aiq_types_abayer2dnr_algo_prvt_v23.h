@@ -22,8 +22,8 @@
 
 #include "abayer2dnrV23/rk_aiq_types_abayer2dnr_algo_int_v23.h"
 #include "RkAiqCalibDbTypes.h"
-#include "xcam_log.h"
-#include "xcam_common.h"
+#include "base/xcam_log.h"
+#include "base/xcam_common.h"
 
 //RKAIQ_BEGIN_DECLARE
 

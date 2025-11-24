@@ -22,8 +22,8 @@
 
 #include "acnrV30/rk_aiq_types_acnr_algo_int_v30.h"
 #include "RkAiqCalibDbTypes.h"
-#include "xcam_log.h"
-#include "xcam_common.h"
+#include "base/xcam_log.h"
+#include "base/xcam_common.h"
 
 //RKAIQ_BEGIN_DECLARE
 

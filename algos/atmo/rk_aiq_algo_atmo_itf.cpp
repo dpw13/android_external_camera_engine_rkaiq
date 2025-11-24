@@ -18,7 +18,7 @@
  */
 
 #include "atmo/rk_aiq_algo_atmo_itf.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "atmo/rk_aiq_atmo_algo.h"
 #include "atmo/rk_aiq_types_atmo_algo_prvt.h"
 #include "rk_aiq_algo_types.h"

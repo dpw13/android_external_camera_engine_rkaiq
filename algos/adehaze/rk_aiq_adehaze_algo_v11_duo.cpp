@@ -18,7 +18,7 @@
  */
 #include "rk_aiq_adehaze_algo_v11_duo.h"
 #include <string.h>
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 float GetInterpRatioV11Duo(float* pX, int& lo, int& hi, float CtrlValue, int length_max) {
     float ratio = 0.0f;

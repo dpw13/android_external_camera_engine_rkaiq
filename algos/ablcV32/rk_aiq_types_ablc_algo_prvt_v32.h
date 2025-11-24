@@ -20,8 +20,8 @@
 #include "RkAiqCalibDbTypesV2.h"
 #include "ablcV32/rk_aiq_types_ablc_algo_int_v32.h"
 #include "abayer2dnrV23/rk_aiq_types_abayer2dnr_algo_int_v23.h"
-#include "xcam_common.h"
-#include "xcam_log.h"
+#include "base/xcam_common.h"
+#include "base/xcam_log.h"
 
 typedef struct AblcContext_V32_s {
     AblcOPMode_V32_t eMode;

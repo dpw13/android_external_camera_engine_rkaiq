@@ -25,7 +25,7 @@
 
 #include "dvs_app.h"
 #include "rk_aiq_mems_sensor.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 namespace RkCam {
 

@@ -4,9 +4,9 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES = rkisp_3A_server.cpp
-LOCAL_CPPFLAGS += -std=c++11 -Wno-error
+LOCAL_CPPFLAGS += -std=c++11
 
-LOCAL_CFLAGS += -Wno-error -Wno-return-type
+#LOCAL_CFLAGS += -Wno-error -Wno-return-type
 
 #LOCAL_CPPFLAGS += -DLINUX
 #LOCAL_CPPFLAGS += $(PRJ_CPPFLAGS)
@@ -106,9 +106,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES = rkisp_3A_server_multi_ctl.cpp
 
-LOCAL_CPPFLAGS += -std=c++11 -Wno-error
+LOCAL_CPPFLAGS += -std=c++11
 
-LOCAL_CFLAGS += -Wno-error -Wno-return-type
+#LOCAL_CFLAGS += -Wno-error -Wno-return-type
 
 #LOCAL_CPPFLAGS += -DLINUX
 #LOCAL_CPPFLAGS += $(PRJ_CPPFLAGS)
@@ -207,14 +207,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES = rkisp_3A_demo.cpp
 
-LOCAL_CPPFLAGS += -std=c++11 -Wno-error -frtti
+LOCAL_CPPFLAGS += -std=c++11 -frtti
 LOCAL_CPPFLAGS += -std=c++1y
 LOCAL_CPPFLAGS += -DANDROID_OS
-
-#Namespace Declaration
-LOCAL_CPPFLAGS += -DNAMESPACE_DECLARATION=namespace\ android\ {\namespace\ camera2
-LOCAL_CPPFLAGS += -DNAMESPACE_DECLARATION_END=}
-LOCAL_CPPFLAGS += -DUSING_DECLARED_NAMESPACE=using\ namespace\ android::camera2
 
 #local
 LOCAL_C_INCLUDES := \
@@ -274,7 +269,7 @@ endif
 
 LOCAL_STATIC_LIBRARIES += android.hardware.camera.common@1.0-helper
 LOCAL_CFLAGS += -DANDROID_VERSION_ABOVE_8_X
-LOCAL_CFLAGS += -Wno-error -Wno-return-type
+#LOCAL_CFLAGS += -Wno-error -Wno-return-type
 LOCAL_CFLAGS += -DANDROID_OS
 
 LOCAL_SHARED_LIBRARIES += libutils libcutils liblog

@@ -25,7 +25,7 @@
 #include "xcam_thread.h"
 #include "smartptr.h"
 #include "safe_list.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "gen_mesh/genMesh.h"
 #include "afec/rk_aiq_types_afec_algo_int.h"
 #include "rk_aiq_types_priv.h"

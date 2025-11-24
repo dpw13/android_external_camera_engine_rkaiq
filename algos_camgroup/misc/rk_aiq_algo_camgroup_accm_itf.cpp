@@ -21,7 +21,7 @@
 #include "accm/rk_aiq_algo_accm_itf.h"
 #include "misc/rk_aiq_algo_camgroup_misc_itf.h"
 #include "rk_aiq_algo_camgroup_types.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 RKAIQ_BEGIN_DECLARE
 

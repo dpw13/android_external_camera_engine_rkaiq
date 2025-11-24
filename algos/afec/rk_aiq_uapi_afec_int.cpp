@@ -17,7 +17,7 @@
  *
  */
 
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "afec/rk_aiq_uapi_afec_int.h"
 #include "afec/rk_aiq_types_afec_algo_prvt.h"
 

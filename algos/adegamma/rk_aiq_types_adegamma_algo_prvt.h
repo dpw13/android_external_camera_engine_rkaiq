@@ -22,7 +22,7 @@
 
 #include "adegamma/rk_aiq_types_adegamma_algo_int.h"
 #include "RkAiqCalibDbTypes.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #define DEGAMMA_LIMIT_VALUE(value,max_value,min_value)      (value > max_value? max_value : value < min_value ? min_value : value)
 

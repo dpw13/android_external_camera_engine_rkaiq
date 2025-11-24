@@ -25,7 +25,7 @@
 #include "amerge_uapi_head.h"
 #include "atmo_uapi_head.h"
 #include "awb_uapi_head.h"
-#include "rk_aiq_user_api_common.h"
+#include "uAPI2/rk_aiq_user_api_common.h"
 #include "adpcc/rk_aiq_types_adpcc_ext.h"
 
 #include "a3dlut/rk_aiq_types_a3dlut_ext.h"

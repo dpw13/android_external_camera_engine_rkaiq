@@ -22,7 +22,7 @@
 
 #include "accm/rk_aiq_accm_algo_com.h"
 #include "interpolation.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 RKAIQ_BEGIN_DECLARE
 

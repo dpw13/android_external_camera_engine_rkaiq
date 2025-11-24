@@ -21,7 +21,7 @@
 
 #include "rk_aiq_algo_types.h"
 #include "rk_aiq_types_algo_acgc_prvt.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 RKAIQ_BEGIN_DECLARE
 

@@ -27,7 +27,7 @@
 
 #include "rk_aiq_mems_sensor.h"
 #include "task_service.h"
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 
 using namespace XCam;
 

@@ -31,7 +31,7 @@
 #include "ablc_head_V32.h"
 #include "rk_aiq_algo_des.h"
 #include "sharp_head_v33.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "xcam_mutex.h"
 
 struct cJSON;

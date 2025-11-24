@@ -374,6 +374,7 @@ RkAiqCamGroupManager::processAiqCoreMsgs(RkAiqCore* src, RkAiqCoreVdBufMsg& msg)
     case XCAM_MESSAGE_AEC_STATS_OK :
         // TODO: should get from RkAiqAnalyzerGroup::getMsgDelayCnt
         frameId += 2;
+        break;
     default:
         break;
     }

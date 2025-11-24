@@ -24,7 +24,7 @@
 #include <memory>
 
 #include "unique_fd.h"
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 
 extern "C" {
 

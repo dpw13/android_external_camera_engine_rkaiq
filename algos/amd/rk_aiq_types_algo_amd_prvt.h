@@ -3,7 +3,7 @@
 
 #include "base/xcam_common.h"
 #include "RkAiqCalibDbTypes.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "amd/rk_aiq_types_amd_algo.h"
 #include "amd/rk_aiq_types_algo_amd_int.h"
 #include "media_buffer/media_buffer_pool.h"

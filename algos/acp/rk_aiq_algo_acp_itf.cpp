@@ -18,7 +18,7 @@
  */
 
 #include "acp/rk_aiq_algo_acp_itf.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "acp/rk_aiq_types_algo_acp_prvt.h"
 #include "rk_aiq_algo_types.h"
 #include "RkAiqCalibDbV2Helper.h"

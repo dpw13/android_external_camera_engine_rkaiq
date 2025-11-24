@@ -18,7 +18,7 @@
  */
 
 #include "amerge/rk_aiq_algo_amerge_itf.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #if RKAIQ_HAVE_MERGE_V10
 #include "amerge/rk_aiq_amerge_algo_v10.h"
 #endif

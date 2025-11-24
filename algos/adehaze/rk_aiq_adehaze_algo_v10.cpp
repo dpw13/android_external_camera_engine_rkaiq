@@ -20,7 +20,7 @@
 
 #include <string.h>
 
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 float LinearInterp(const float* pX, const float* pY, float posx, int XSize) {
     int index;

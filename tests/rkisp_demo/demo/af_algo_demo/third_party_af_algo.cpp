@@ -1,5 +1,5 @@
 #include "third_party_af_algo.h"
-#include "rk_aiq_user_api2_sysctl.h"
+#include "uAPI2/rk_aiq_user_api2_sysctl.h"
 
 static void set_af_manual_meascfg(const rk_aiq_sys_ctx_t* ctx)
 {

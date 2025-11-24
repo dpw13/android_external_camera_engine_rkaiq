@@ -18,7 +18,7 @@
  */
 #include "rk_aiq_adehaze_algo_v11.h"
 #include <string.h>
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rkisp21-config.h"
 
 float GetInterpRatioV11(float* pX, int& lo, int& hi, float CtrlValue, int length_max) {
@@ -566,7 +566,7 @@ void GetHistParamsV11(CalibDbDehazeV11_t* pCalibV11, RkAiqAdehazeProcResult_t* p
     // clip hpara_en
     pProcRes->ProcResV11.hpara_en = pProcRes->ProcResV11.dc_en
                                         ? pProcRes->ProcResV11.hpara_en
-                                        : FUNCTION_ENABLE;  //  dc en ¹Ø±Õ£¬hpara±ØÐè¿ª
+                                        : FUNCTION_ENABLE;  //  dc en ï¿½Ø±Õ£ï¿½hparaï¿½ï¿½ï¿½è¿ª
 
     if (pProcRes->ProcResV11.hist_en) {
         LOGD_ADEHAZE(

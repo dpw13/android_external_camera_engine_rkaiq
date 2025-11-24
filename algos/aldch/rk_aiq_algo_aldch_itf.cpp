@@ -21,7 +21,7 @@
 #include "aldch/rk_aiq_types_aldch_algo_prvt.h"
 #include "rk_aiq_algo_types.h"
 #include "RkAiqCalibDbV2Helper.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_ldch_generate_mesh.h"
 
 RKAIQ_BEGIN_DECLARE

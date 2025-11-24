@@ -17,7 +17,7 @@
  *
  */
 
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "aldch/rk_aiq_uapi_aldch_int.h"
 #include "aldch/rk_aiq_types_aldch_algo_prvt.h"
 

@@ -18,7 +18,7 @@
 
 #include "Isp32Params.h"
 #include "isp3x/CamHwIsp3x.h"
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 
 namespace RkCam {
 

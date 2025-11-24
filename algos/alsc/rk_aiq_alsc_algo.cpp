@@ -22,7 +22,7 @@
 
 #include "rk_aiq_algo_types.h"
 #include "alsc/rk_aiq_alsc_algo.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "interpolation.h"
 #include "RkAiqCalibDbV2Helper.h"
 #include "rk_aiq_alsc_convert_otp.h"

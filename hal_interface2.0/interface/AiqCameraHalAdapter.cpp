@@ -43,14 +43,14 @@
 #include "settings_processor.h"
 #include "RkAiqVersion.h"
 #include "RkAiqCalibVersion.h"
-#include "rk_aiq_user_api2_imgproc.h"
-#include "rk_aiq_user_api2_ae.h"
+#include "uAPI2/rk_aiq_user_api2_imgproc.h"
+#include "uAPI2/rk_aiq_user_api2_ae.h"
 
 #define DEFAULT_ENTRY_CAP 64
 #define DEFAULT_DATA_CAP 1024
 
 #include <cutils/properties.h>
-#define PROPERTY_VALUE_MAX 32
+
 #define CAM_RKAIQ_PROPERTY_KEY  "vendor.cam.librkaiq.ver"
 #define CAM_RKAIQ_CALIB_PROPERTY_KEY  "vendor.cam.librkaiqCalib.ver"
 #define CAM_RKAIQ_ADAPTER_APROPERTY_KEY  "vendor.cam.librkaiqAdapter.ver"

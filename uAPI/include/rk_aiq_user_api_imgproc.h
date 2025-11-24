@@ -19,7 +19,7 @@
 #define _RK_AIQ_UAPI_IMGPROC_H_
 
 #include "base/xcam_common.h"
-#include "rk_aiq_user_api_common.h"
+#include "uAPI2/rk_aiq_user_api_common.h"
 #include "rk_aiq_user_api_sysctl.h"
 #include "rk_aiq_user_api_awb.h"
 #include "rk_aiq_user_api_ae.h"

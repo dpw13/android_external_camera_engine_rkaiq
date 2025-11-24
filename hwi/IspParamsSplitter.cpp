@@ -69,6 +69,7 @@ void SplitAecWeight(
     case RIGHT_MODE:
         memcpy(left_weight, ori_weight, wnd_num * wnd_num * sizeof(u8));
         memcpy(right_weight, ori_weight, wnd_num * wnd_num * sizeof(u8));
+        break;
     default:
         break;
     }

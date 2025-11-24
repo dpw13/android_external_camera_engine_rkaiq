@@ -4,7 +4,7 @@
 #include "base/xcam_common.h"
 #include "RkAiqCalibDbTypes.h"
 #include "RkAiqCalibDbTypesV2.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_types_acp_algo.h"
 
 typedef struct AcpContext_s {

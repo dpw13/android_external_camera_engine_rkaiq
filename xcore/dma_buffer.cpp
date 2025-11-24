@@ -26,7 +26,7 @@
 
 #include <cassert>
 
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "xcam_std.h"
 
 namespace XCam {

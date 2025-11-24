@@ -22,7 +22,7 @@
 
 #include "dma_video_buffer.h"
 
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 namespace XCam {
 

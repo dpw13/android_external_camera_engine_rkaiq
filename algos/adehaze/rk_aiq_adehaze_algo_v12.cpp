@@ -18,7 +18,7 @@
  */
 #include "rk_aiq_adehaze_algo_v12.h"
 #include <string.h>
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 void DehazeHistWrTableInterpV12(const HistWr_t* pCurveIn, mManual_curve_t* pCurveOut, float posx) {
     int i       = 0;
@@ -1012,7 +1012,7 @@ void GetHistParamsV12(CalibDbDehazeV12_t* pCalibV12, RkAiqAdehazeProcResult_t* p
     // clip hpara_en
     pProcRes->ProcResV12.hpara_en = pProcRes->ProcResV12.dc_en
                                     ? pProcRes->ProcResV12.hpara_en
-                                    : FUNCTION_ENABLE;  //  dc en ¹Ø±Õ£¬hpara±ØÐè¿ª
+                                    : FUNCTION_ENABLE;  //  dc en ï¿½Ø±Õ£ï¿½hparaï¿½ï¿½ï¿½è¿ª
 
     XCamReturn ret = XCAM_RETURN_NO_ERROR;
     if (pCalibV12->hist_setting.hist_wr.mode == HIST_WR_MANUAL) {

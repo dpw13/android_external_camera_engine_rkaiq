@@ -33,7 +33,7 @@
 #include "imu_service.h"
 #include "rk_aiq_mems_sensor.h"
 #include "smart_buffer_priv.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>

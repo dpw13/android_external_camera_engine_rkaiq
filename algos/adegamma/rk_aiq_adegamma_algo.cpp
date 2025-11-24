@@ -17,7 +17,7 @@
  *
  */
 #include <string.h>
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 #include "rk_aiq_adegamma_algo.h"
 
 RKAIQ_BEGIN_DECLARE

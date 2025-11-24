@@ -24,7 +24,7 @@
 #include <string>
 
 #include "common/rk_aiq_types.h"
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 
 namespace RkCam {
 

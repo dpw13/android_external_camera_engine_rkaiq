@@ -22,7 +22,7 @@
 #include "rk_aiq_types_priv.h"
 
 #include "orb_algos.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #if OPENCV_SUPPORT
 #include "orb_algos_opencv.h"

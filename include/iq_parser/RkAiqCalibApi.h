@@ -35,8 +35,8 @@
 #endif
 #if defined(__linux__)
 #include "smartptr.h"
-#include <xcam_common.h>
-#include "xcam_log.h"
+#include "base/xcam_common.h"
+#include "base/xcam_log.h"
 
 #ifdef DCT_ASSERT
 #undef DCT_ASSERT

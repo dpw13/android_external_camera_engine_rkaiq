@@ -24,7 +24,7 @@
 
 #define PRIORITY_CAMERA (-10)
 
-NAMESPACE_DECLARATION {
+namespace android { namespace camera2 {
 
 /* Abstraction of MessageThread */
 class IMessageHandler
@@ -73,6 +73,6 @@ private:
     pthread_t mThreadId;
 };
 
-} NAMESPACE_DECLARATION_END
+} }
 #endif /* CAMERA3_HAL_IMESSAGETHREAD_H_ */
 

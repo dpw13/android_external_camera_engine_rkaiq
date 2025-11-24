@@ -20,7 +20,7 @@
 #include <string.h>
 #include "rk_aiq_types_agamma_algo_int.h"
 #include "rk_aiq_types_agamma_algo_prvt.h"
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 
 RKAIQ_BEGIN_DECLARE
 

@@ -23,8 +23,8 @@
 #include "rk_aiq_types.h"
 #include "rk_aiq_types_alsc_algo_int.h"
 #include "alsc_head.h"
-#include "xcam_log.h"
-#include "xcam_common.h"
+#include "base/xcam_log.h"
+#include "base/xcam_common.h"
 #include "common/list.h"
 #include "RkAiqCalibDbV2Helper.h"
 

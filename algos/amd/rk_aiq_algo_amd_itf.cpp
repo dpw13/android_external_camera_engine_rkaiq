@@ -18,7 +18,7 @@
  */
 
 #include "amd/rk_aiq_algo_amd_itf.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "amd/rk_aiq_types_algo_amd_prvt.h"
 #include "md_lib/motion_detect.h"
 #include "media_buffer/media_buffer_pool.h"

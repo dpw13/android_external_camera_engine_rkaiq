@@ -26,7 +26,7 @@
 #include <iostream>
 
 #include "dvs_app.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 namespace RkCam {
 

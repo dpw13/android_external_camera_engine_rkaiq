@@ -20,8 +20,8 @@
 #ifndef __COMMON_HWI_ISP_PARAMS_SPLITTER_H__
 #define __COMMON_HWI_ISP_PARAMS_SPLITTER_H__
 
-#include "xcam_common.h"
-#include "xcam_log.h"
+#include "base/xcam_common.h"
+#include "base/xcam_log.h"
 
 
 namespace RkCam {

@@ -23,7 +23,7 @@
 #include "RkAiqCoreConfig.h"
 #include "rk_aiq_algo_des.h"
 #include "rkaiq_ini.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 namespace RkCam {
 

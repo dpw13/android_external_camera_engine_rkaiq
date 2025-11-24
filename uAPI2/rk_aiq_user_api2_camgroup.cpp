@@ -17,7 +17,7 @@
  *
  */
 
-#include "rk_aiq_user_api2_sysctl.h"
+#include "uAPI2/rk_aiq_user_api2_sysctl.h"
 #include "rk_aiq_user_api2_camgroup.h"
 #include "RkAiqCamGroupManager.h"
 #include "common/panorama_stitchingApp.h"

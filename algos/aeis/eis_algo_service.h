@@ -35,7 +35,7 @@
 #include "scaler_service.h"
 #include "task_service.h"
 #include "rk_aiq_algo_types.h"
-#include "xcam_common.h"
+#include "base/xcam_common.h"
 
 namespace XCam {
 

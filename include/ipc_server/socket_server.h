@@ -14,14 +14,14 @@
 #include "include/uAPI2/rk_aiq_user_api2_helper.h"
 #include "include/uAPI2/rk_aiq_user_api2_sysctl.h"
 #include "include/uAPI2/rk_aiq_user_api2_awb.h"
-#include "rk_aiq_user_api2_ae.h"
+#include "uAPI2/rk_aiq_user_api2_ae.h"
 #include "rk_aiq_user_api_ae.h"
 #include "rkaiq_tool_ae.h"
 #include "rkaiq_tool_anr.h"
 #include "rkaiq_tool_imgproc.h"
 #include "rkaiq_tool_sharp.h"
 #include "rkaiq_tool_sysctl.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include <algorithm>
 #include <cctype>
 #include <iostream>

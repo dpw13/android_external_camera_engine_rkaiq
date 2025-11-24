@@ -19,7 +19,7 @@
 
 #include "awdr/rk_aiq_algo_awdr_itf.h"
 #include "rk_aiq_algo_types.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 RKAIQ_BEGIN_DECLARE
 

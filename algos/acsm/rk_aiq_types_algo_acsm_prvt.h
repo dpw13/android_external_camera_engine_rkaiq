@@ -23,7 +23,7 @@
 #include "RkAiqCalibDbTypes.h"
 #include "RkAiqCalibDbTypesV2.h"
 #include "RkAiqCalibDbV2Helper.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_types_acsm_algo.h"
 
 typedef struct AcsmContext_s {

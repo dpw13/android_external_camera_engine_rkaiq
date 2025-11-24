@@ -17,7 +17,7 @@
 
 #include "RkAiqCamGroupHandleInt.h"
 #include "algo_handlers/RkAiqAwbV21Handle.h"
-//#include "rk_aiq_user_api2_sysctl.h"
+//#include "uAPI2/rk_aiq_user_api2_sysctl.h"
 
 RKAIQ_BEGIN_DECLARE
 

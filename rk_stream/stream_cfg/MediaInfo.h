@@ -22,7 +22,7 @@
 #include "mediactl/mediactl-priv.h"
 #include <linux/v4l2-subdev.h>
 #include "xcam_thread.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "Stream.h"
 #include <time.h>
 #include <unistd.h>

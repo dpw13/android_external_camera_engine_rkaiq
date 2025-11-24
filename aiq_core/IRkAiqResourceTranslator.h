@@ -17,7 +17,7 @@
 #define _I_RK_AIQ_RESOURCE_TRANSLATOR_H_
 
 #include "smartptr.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "video_buffer.h"
 #include "rk_aiq_pool.h"
 

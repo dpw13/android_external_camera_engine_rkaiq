@@ -20,7 +20,7 @@
 #include "af/rk_aiq_types_af_algo_int.h"
 #include "rk_aiq_algo_types.h"
 #include "amerge/rk_aiq_types_amerge_hw.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 /********************also use for gamma, dehaze, tmo and drc*******************/
 // for noramlize EnvLv

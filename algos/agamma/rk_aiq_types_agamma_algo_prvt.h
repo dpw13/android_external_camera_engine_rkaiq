@@ -24,7 +24,7 @@
 #include "agamma/rk_aiq_types_agamma_algo_int.h"
 #include "amerge/rk_aiq_types_amerge_algo_prvt.h"
 #include "rk_aiq_types_agamma_hw.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #define ISP3X_SEGNUM_LOG_49     (2)
 #define ISP3X_SEGNUM_LOG_45     (0)

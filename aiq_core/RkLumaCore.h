@@ -23,7 +23,7 @@
 #include "xcam_thread.h"
 #include "smartptr.h"
 #include "safe_list.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "video_buffer.h"
 #include "rk_aiq_luma.h"
 #include "RkAiqCalibDbTypes.h"

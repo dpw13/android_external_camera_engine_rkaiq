@@ -3968,6 +3968,7 @@ bool Isp20Params::convert3aResultsToIspCfg(SmartPtr<cam3aResult> &result,
         if (params)
             convertAiqHistToIsp20Params(isp_cfg, params->data()->result);
     }
+    break;
     case RESULT_TYPE_EXPOSURE_PARAM:
     {
         // TODO

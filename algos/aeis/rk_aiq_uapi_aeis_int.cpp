@@ -19,7 +19,7 @@
 #include "aeis/rk_aiq_uapi_aeis_int.h"
 
 #include "aeis/rk_aiq_types_aeis_algo_prvt.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 XCamReturn rk_aiq_uapi_aeis_SetAttrib(RkAiqAlgoContext* ctx, rk_aiq_eis_attrib_t attr,
                                       bool need_sync) {

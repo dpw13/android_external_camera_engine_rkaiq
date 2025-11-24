@@ -20,7 +20,7 @@
 #include "alsc/rk_aiq_algo_alsc_itf.h"
 #include "alsc/rk_aiq_alsc_algo.h"
 #include "rk_aiq_algo_types.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "rk_aiq_alsc_convert_otp.h"
 
 RKAIQ_BEGIN_DECLARE

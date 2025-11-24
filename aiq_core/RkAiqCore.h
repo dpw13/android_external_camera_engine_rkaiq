@@ -36,7 +36,7 @@
 #include "safe_list.h"
 #include "smartptr.h"
 #include "video_buffer.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 #include "xcam_thread.h"
 
 using namespace XCam;

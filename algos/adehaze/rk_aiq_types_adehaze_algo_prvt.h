@@ -27,7 +27,7 @@
 #include "rk_aiq_algo_types.h"
 #include "rk_aiq_types_adehaze_hw.h"
 #include "rk_aiq_types_adehaze_stat.h"
-#include "xcam_log.h"
+#include "base/xcam_log.h"
 
 #define DEHAZE_GAUS_H0                              (2)
 #define DEHAZE_GAUS_H1                              (4)

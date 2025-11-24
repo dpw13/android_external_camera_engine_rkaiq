@@ -15,7 +15,7 @@
  *
  */
 
-#include "rk_aiq_user_api2_sysctl.h"
+#include "uAPI2/rk_aiq_user_api2_sysctl.h"
 #include "rk_aiq_user_api_sysctl.h"
 #include "rk_aiq_api_private.h"
 #include "RkAiqManager.h"

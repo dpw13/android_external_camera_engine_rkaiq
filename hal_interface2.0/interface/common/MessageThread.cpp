@@ -21,7 +21,7 @@
 #include <base/xcam_log.h>
 #include "CommonUtilMacros.h"
 
-NAMESPACE_DECLARATION {
+namespace android { namespace camera2 {
 
 void thread_data_t::trampoline(const thread_data_t* t)
 {
@@ -77,4 +77,4 @@ status_t MessageThread::run()
     return (ret == 0) ? OK : NO_INIT;
 }
 
-} NAMESPACE_DECLARATION_END
+} }

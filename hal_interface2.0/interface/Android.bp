@@ -1,0 +1,103 @@
+//--------------------------------------------------------------------------
+//  Copyright (C) 2020 Rockchip Electronics Co. Ltd. All rights reserved.
+//
+//Redistribution and use in source and binary forms, with or without
+//modification, are permitted provided that the following conditions are met:
+//    * Redistributions of source code must retain the above copyright
+//      notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//      notice, this list of conditions and the following disclaimer in the
+//      documentation and/or other materials provided with the distribution.
+//    * Neither the name of The Linux Foundation nor
+//      the names of its contributors may be used to endorse or promote
+//      products derived from this software without specific prior written
+//      permission.
+//
+//THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+//NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+//ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//--------------------------------------------------------------------------
+
+cc_library_shared {
+    name: "librkisp",
+    rtti: true,
+    defaults: [ "rkaiq-defaults", "rkaiq-defaults-flags", ],
+
+    srcs: [
+        "rkisp_control_loop_impl.cpp",
+        "rkcamera_vendor_tags.cpp",
+        "rkaiq.cpp",
+        "AiqCameraHalAdapter.cpp",
+        "CameraWindow.cpp",
+        "settings_processor.cpp",
+        "Metadata2Str.cpp",
+        //states
+        "ae_state_machine.cpp",
+        //message
+        "af_state_machine.cpp",
+        "awb_state_machine.cpp",
+        "common/MessageThread.cpp"
+    ],
+
+    cppflags: [
+        "-std=c++11",
+        "-DLINUX",
+        "-std=c++1y",
+    ],
+
+    shared_libs: [
+        "libutils",
+        "libcutils",
+        "liblog",
+        "libcamera_metadata",
+        "libdrm",
+        "librkaiq",
+    ],
+
+    include_dirs: [
+        //system and frameworks
+        "system/media/camera/include",
+        //local
+        "system/media/private/camera/include",
+        "system/core/libutils/include",
+        "system/core/include",
+        "frameworks/native/libs/binder/include",
+        "frameworks/av/include",
+    ],
+
+    local_include_dirs: [
+        "include",
+        "include_aiq",
+        "xcore",
+        "common",
+    ],
+
+    proprietary: true,
+    static_libs: ["android.hardware.camera.common@1.0-helper"],
+
+    cflags: [
+        "-DANDROID_VERSION_ABOVE_8_X",
+        "-DANDROID_PLATFORM",
+        "-DANDROID_OS",
+        "-UNDEBUG",
+    ],
+
+    header_libs: [
+        "libhardware_headers",
+        "libbinder_headers",
+        "gl_headers",
+        "libutils_headers",
+        "librkaiq_headers",
+    ],
+
+    export_include_dirs: ["include_aiq"],
+
+}
