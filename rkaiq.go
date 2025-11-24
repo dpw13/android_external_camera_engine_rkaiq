@@ -59,7 +59,7 @@ func rkaiqDefaults(ctx android.LoadHookContext) {
 
     soc := rkaiq_get_aiq_version(ctx)
     macros_map := rkaiq_macro_switch(soc)
-    p.Target.Android.Cflags = rkaiq_getAlgosMacros(macros_map)
+    p.Target.Android.Cflags = rkaiq_getAlgosMacros(macros_map, false)
     cflags := rkaiqFlags(ctx)
     p.Target.Android.Cflags = append(p.Target.Android.Cflags, cflags...)
     ctx.AppendProperties(p)

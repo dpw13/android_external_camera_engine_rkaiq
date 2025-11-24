@@ -4,7 +4,7 @@ import (
     "fmt"
 )
 
-func rkaiq_getAlgosMacros(macros_map map[string]bool) []string {
+func rkaiq_getAlgosMacros(macros_map map[string]bool, verbose bool) []string {
     var flag0 bool = false;
 
     var cflags []string;
@@ -386,9 +386,11 @@ func rkaiq_getAlgosMacros(macros_map map[string]bool) []string {
     if (flag0) {
         cflags = append(cflags, "-DRKAIQ_HAVE_DRC_V12_LITE=1")
     }
-    for i, v := range cflags {
-        fmt.Printf("%d %s\n", i, v)
+    if (verbose) {
+        for i, v := range cflags {
+            fmt.Printf("%d %s\n", i, v)
+        }
+        fmt.Printf("cflags size: %d\n", len(cflags))
     }
-    fmt.Printf("cflags size: %d\n", len(cflags))
     return cflags;
 }

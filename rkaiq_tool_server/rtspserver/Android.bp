@@ -101,7 +101,6 @@ cc_library_static {
     cppflags: [
         "-Wall",
         "-fPIC",
-        "-Wno-error",
     ],
 
     srcs: [

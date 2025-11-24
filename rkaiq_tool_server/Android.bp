@@ -25,7 +25,6 @@ cc_defaults {
 	rtti: true,
     cflags: [
         "-Wall",
-        "-Wno-error",
         "-Wextra",
         "-Wno-missing-field-initializers",
         "-Wno-unused-parameter",
