@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES = rkisp_3A_server.cpp
-LOCAL_CPPFLAGS += -std=c++11
+LOCAL_CPPFLAGS += -std=c++17
 
 #LOCAL_CFLAGS += -Wno-error -Wno-return-type
 
@@ -70,12 +70,6 @@ LOCAL_SHARED_LIBRARIES += libutils libcutils liblog
 LOCAL_SHARED_LIBRARIES += \
 	librkaiq \
 	librkisp
-
-LOCAL_CPPFLAGS += \
-    -DUSING_METADATA_NAMESPACE=using\ ::android::hardware::camera::common::V1_0::helper::CameraMetadata
-
-ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>= 26)))
-endif
 
 ifeq (rk356x, $(strip $(TARGET_BOARD_PLATFORM)))
 LOCAL_CFLAGS += -DISP_HW_V21
@@ -173,12 +167,6 @@ LOCAL_SHARED_LIBRARIES += \
 	librkaiq \
 	librkisp
 
-LOCAL_CPPFLAGS += \
-    -DUSING_METADATA_NAMESPACE=using\ ::android::hardware::camera::common::V1_0::helper::CameraMetadata
-
-ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>= 26)))
-endif
-
 ifeq (rk356x, $(strip $(TARGET_BOARD_PLATFORM)))
 LOCAL_CFLAGS += -DISP_HW_V21
 endif
@@ -207,8 +195,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES = rkisp_3A_demo.cpp
 
-LOCAL_CPPFLAGS += -std=c++11 -frtti
-LOCAL_CPPFLAGS += -std=c++1y
+LOCAL_CPPFLAGS += -std=c++17 -frtti
 LOCAL_CPPFLAGS += -DANDROID_OS
 
 #local
@@ -277,12 +264,6 @@ LOCAL_SHARED_LIBRARIES += libutils libcutils liblog
 LOCAL_SHARED_LIBRARIES += \
 	librkaiq \
 	librkisp
-
-LOCAL_CPPFLAGS += \
-    -DUSING_METADATA_NAMESPACE=using\ ::android::hardware::camera::common::V1_0::helper::CameraMetadata
-
-ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>= 26)))
-endif
 
 ifeq (rk356x, $(strip $(TARGET_BOARD_PLATFORM)))
 LOCAL_CFLAGS += -DISP_HW_V21

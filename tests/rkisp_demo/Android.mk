@@ -11,12 +11,12 @@ ifneq ($(filter rk3588, $(strip $(TARGET_BOARD_PLATFORM))), )
 LOCAL_CPPFLAGS += -DISP_HW_V30
 endif
 LOCAL_SRC_FILES :=\
-	demo/drmDsp.c \
-	demo/drmDsp/bo.c \
-	demo/drmDsp/dev.c \
-	demo/drmDsp/modeset.c \
-	demo/rkisp_demo.cpp \
-	demo/rkRgaApi.cpp \
+    demo/drmDsp.c \
+    demo/drmDsp/bo.c \
+    demo/drmDsp/dev.c \
+    demo/drmDsp/modeset.c \
+    demo/rkisp_demo.cpp \
+    demo/rkRgaApi.cpp \
     demo/ae_algo_demo/third_party_ae_algo.cpp \
     demo/af_algo_demo/third_party_af_algo.cpp \
     demo/sample/sample_a3dlut_module.cpp \
@@ -52,9 +52,9 @@ LOCAL_SRC_FILES :=\
     demo/sample/sample_smartIr.cpp \
 
 #TODO: have compile issue on Android now
-	#demo/rga_control.c \
-	#demo/rkdrm_display.c \
-	#demo/display.c
+    #demo/rga_control.c \
+    #demo/rkdrm_display.c \
+    #demo/display.c
 
 ifneq ($(filter rk356x rk3588, $(strip $(TARGET_BOARD_PLATFORM))), )
 LOCAL_SRC_FILES += demo/awb_algo_demo/third_party_awb_algo.cpp
@@ -71,58 +71,55 @@ LOCAL_CPPFLAGS += -std=c++11 -DAndroid
 LOCAL_CFLAGS += -DANDROID_OS
 LOCAL_CFLAGS += -DISPDEMO_ENABLE_RGA=1
 LOCAL_C_INCLUDES := \
-	$(LOCAL_PATH)/demo/ \
-	$(LOCAL_PATH)/demo/include \
-	$(LOCAL_PATH)/demo/include/rga \
-	$(LOCAL_PATH)/demo/include/libdrm \
-	$(LOCAL_PATH)/demo/drmDsp \
-	$(LOCAL_PATH)/demo/sample \
-	$(LOCAL_PATH)/../../include/uAPI \
-	$(LOCAL_PATH)/../../include/uAPI2 \
-	$(LOCAL_PATH)/../../include/xcore \
-	$(LOCAL_PATH)/../../include/algos \
-	$(LOCAL_PATH)/../../include/common \
-	$(LOCAL_PATH)/../../include/iq_parser \
-	$(LOCAL_PATH)/deps \
-	$(LOCAL_PATH)/deps/include \
-	$(LOCAL_PATH)/deps/include/rga \
-	$(LOCAL_PATH)/deps/include/libdrm \
-	$(LOCAL_PATH)/deps/include/libkms \
+    $(LOCAL_PATH)/demo/ \
+    $(LOCAL_PATH)/demo/include \
+    $(LOCAL_PATH)/demo/include/rga \
+    $(LOCAL_PATH)/demo/include/libdrm \
+    $(LOCAL_PATH)/demo/drmDsp \
+    $(LOCAL_PATH)/demo/sample \
+    $(LOCAL_PATH)/../../include/uAPI \
+    $(LOCAL_PATH)/../../include/uAPI2 \
+    $(LOCAL_PATH)/../../include/xcore \
+    $(LOCAL_PATH)/../../include/algos \
+    $(LOCAL_PATH)/../../include/common \
+    $(LOCAL_PATH)/../../include/iq_parser \
+    $(LOCAL_PATH)/deps \
+    $(LOCAL_PATH)/deps/include \
+    $(LOCAL_PATH)/deps/include/rga \
+    $(LOCAL_PATH)/deps/include/libdrm \
+    $(LOCAL_PATH)/deps/include/libkms \
 LOCAL_C_INCLUDES += \
-	system/media/camera/include \
-	frameworks/av/include \
-	external/libdrm/include/drm \
-	external/libdrm \
-	system/core/libutils/include \
-	system/core/include \
-	frameworks/native/libs/binder/include \
+    system/media/camera/include \
+    frameworks/av/include \
+    external/libdrm/include/drm \
+    external/libdrm \
+    system/core/libutils/include \
+    system/core/include \
+    frameworks/native/libs/binder/include \
    frameworks/native/libs/ui/include/ui
 ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>= 26)))
 LOCAL_HEADER_LIBRARIES += \
-	libhardware_headers \
-	libbinder_headers \
-	gl_headers \
-	libutils_headers
+    libhardware_headers \
+    libbinder_headers \
+    gl_headers \
+    libutils_headers
 else
 LOCAL_C_INCLUDES += \
-	hardware/libhardware/include \
-	hardware/libhardware/modules/gralloc \
-	system/core/include \
-	system/core/include/utils \
-	frameworks/av/include \
-	hardware/libhardware/include
+    hardware/libhardware/include \
+    hardware/libhardware/modules/gralloc \
+    system/core/include \
+    system/core/include/utils \
+    frameworks/av/include \
+    hardware/libhardware/include
 endif
 LOCAL_C_INCLUDES += \
-	hardware/rockchip/librga
+    hardware/rockchip/librga
 LOCAL_STATIC_LIBRARIES += android.hardware.camera.common@1.0-helper
 LOCAL_CFLAGS += -DANDROID_VERSION_ABOVE_8_X
 LOCAL_SHARED_LIBRARIES += librkaiq \
-						  libdrm \
-					      librga
-LOCAL_CPPFLAGS += \
-	-DUSING_METADATA_NAMESPACE=using\ ::android::hardware::camera::common::V1_0::helper::CameraMetadata
-ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>= 26)))
-endif
+                          libdrm \
+                          librga
+
 LOCAL_32_BIT_ONLY := true
 LOCAL_MULTILIB := 32
 LOCAL_PROPRIETARY_MODULE := true

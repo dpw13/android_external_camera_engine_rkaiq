@@ -48,9 +48,8 @@ cc_library_shared {
     ],
 
     cppflags: [
-        "-std=c++11",
+        "-std=c++17",
         "-DLINUX",
-        "-std=c++1y",
     ],
 
     shared_libs: [
